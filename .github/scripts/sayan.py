@@ -11,7 +11,7 @@ except ImportError:
 
 # The URL and any other sensitive data can be passed via environment variables
 # In GitHub Actions, these are set in the workflow file using secrets
-PLAYLIST_URL = os.getenv("PLAYLIST_URL") or "https://uplink.lazyspace.online/fifa.m3u"
+PLAYLIST_URL = os.getenv("PLAYLIST_URL") or "https://rkdyiptv.pages.dev/Playlist/Global.m3u"
 MY_SECRET = os.getenv("MY_SECRET")
 
 if not PLAYLIST_URL:
@@ -28,7 +28,7 @@ try:
         content = response.read().decode("utf-8")
 
     # Save the file in the root directory (one level up from this script)
-    output_path = os.path.join(os.path.dirname(__file__), "../../Sayan.m3u")
+    output_path = os.path.join(os.path.dirname(__file__), "../../Starshare.m3u")
     
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(content)
